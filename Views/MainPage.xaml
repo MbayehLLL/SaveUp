@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaveUp.Views.MainPage"
+             Title="SaveUp">
+
+    <ScrollView>
+
+        <VerticalStackLayout Style="{StaticResource PageLayout}">
+        <!-- Logo über dem Titel, zentriert -->
+        <Image Source="appicon420.png" 
+               WidthRequest="150" 
+               HeightRequest="150" 
+               HorizontalOptions="Center" 
+               Margin="0,10,0,10" />
+
+        <Label Text="Willkommen bei SaveUp!" Style="{StaticResource HeaderLabel}" />
+        <Label Text="Verzichten Sie auf Käufe und sehen Sie, wie viel Sie sparen!" Style="{StaticResource SubHeaderLabel}" />
+
+        <!-- Buttons mit definierter Größe -->
+        <Button Text="Neuen Verzicht hinzufügen" 
+                Command="{Binding GoToAddSavingCommand}" 
+                Style="{StaticResource PrimaryButton}" 
+                WidthRequest="250" 
+                HeightRequest="50" 
+                Margin="0,5,0,5" />
+        <Button Text="Einsparungen anzeigen" 
+                Command="{Binding GoToListCommand}" 
+                Style="{StaticResource PrimaryButton}" 
+                WidthRequest="250" 
+                HeightRequest="50" 
+                Margin="0,5,0,5" />
+    </VerticalStackLayout>
+        </ScrollView>
+
+</ContentPage>
